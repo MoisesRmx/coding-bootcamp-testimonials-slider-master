@@ -1,0 +1,171 @@
+body {
+  height: 100vh;
+  background: url(images/pattern-curve.svg) no-repeat bottom left;
+  background-size: 50% auto;
+}
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(images/pattern-bg.svg) no-repeat center right 100px;
+  background-size: 900px auto;
+}
+
+.slider-card {
+  display: none;
+}
+
+.slider_card--mostrar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 80vw;
+}
+
+.slider-info {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  z-index: 2;
+  width: 50vw;
+  background: url(images/pattern-quotes.svg) no-repeat 140px 0;
+  background-size: 16% auto;
+}
+
+.slider-info p {
+  color: hsl(240, 38%, 20%);
+  font-family: 'Inter', sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 0;
+  margin: 80px 0;
+} 
+
+.slider-info h2 {
+  color: hsl(240, 38%, 20%);
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.slider-info h2 span {
+  color: hsl(240, 18%, 77%);
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.slider-imagen {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  width: 36vw;
+  height: 700px;
+  border-radius: 10px;
+}
+
+.slider-imagen.Tanya {
+  background: url(images/image-tanya.jpg) no-repeat center;
+  background-size: auto 100%;
+}
+
+.slider-imagen.John {
+  background: url(images/image-john.jpg) no-repeat center;
+  background-size: auto 100%;
+}
+
+.controlador {
+  position: absolute;
+  bottom: -30px;
+  left: 15%;
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  width: 120px;
+  height: 60px;
+  border-radius: 60px;
+  box-shadow: 0px 10px 20px hsl(240, 18%, 77%);
+}
+
+.controlador-boton-1 {
+  background: url(images/icon-prev.svg) no-repeat center;
+  background-size: 30%;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px 0 0 30px;
+  cursor: pointer;
+}
+
+.controlador-boton-2 {
+  background: url(images/icon-next.svg) no-repeat center;
+  background-size: 30%;
+  width: 60px;
+  height: 60px;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+}
+
+@media(max-width:1000px) {
+  body {
+    height: 100%;
+    background-size: 100% auto;
+  }
+
+  .slider {
+    background-position: center top 25px;
+    background-size: 90vw auto;
+  }
+
+  .slider-card {
+    position: relative;
+    flex-direction: column-reverse;
+  }
+
+  .slider-info {
+    position: relative;
+    align-items: center;
+    width: 85vw;
+    background-position: center top;
+  }
+
+  .slider-info p {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 30px 0 10px  0;
+  }
+
+  .slider-info h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .slider-info h2 span {
+    font-size: 1rem;
+  }
+
+  .slider-imagen {
+    position: relative;
+    width: 70vw;
+    height: 70vw;
+    margin-bottom: 70px;
+    border-radius: 5px;
+  }
+
+  .controlador {
+    left: 33%;
+    bottom: -25px;
+    width: 100px;
+    height: 50px;
+  }
+
+  .controlador-boton-1, .controlador-boton-2 {
+    background-size: 25%;
+    width: 50px;
+    height: 50px;
+  }
+}
